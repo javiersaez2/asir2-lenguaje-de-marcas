@@ -28,7 +28,13 @@ $x=0;
     //$suma1 = $suma1 + $suma;
     //echo $suma1;
 }
-for ($x = 0; $x <3; $x++){
+//for ($i = 0; $i <3; $i++){
+    //for ($i = 0)
+
+while
 
 
-?>
+
+
+
+    >
