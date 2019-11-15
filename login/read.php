@@ -22,8 +22,18 @@ if ($result->num_rows > 0) {
             <input type="submit" value="Delete">
         </form>
         <hr/> 
-
-        <?php
+        
+        <form action="insert.php" method="POST">
+            <input type="hidden" name="id" value="<?php echo $row["id"]?>">
+            <input type="submit" value="Insert">
+        </form>
+        <hr/>
+        <form action="update.php" method="POST">
+            <input type="hidden" name="id" value="<?php echo $row["id"]?>">
+            <input type="submit" value="Update">
+        </form>
+        <hr/> 
+            <?php
     }
 } else {
     echo "0 results";

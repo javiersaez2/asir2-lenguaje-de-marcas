@@ -12,7 +12,7 @@ if ($conn->connect_error) {
 
 
 if(isset($_POST['save'])){
-    $sql = "INSERT INTO blog (title, info,img)
+    $sql = "UPDATE INTO blog (title, info,img)
 VALUES ('".$_POST["title"]."','".$_POST["info"]."','".$_POST["img"]."')";
 $result = $conn->query($sql);
     header("Location: read.php");
