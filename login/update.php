@@ -12,24 +12,24 @@ if ($conn->connect_error) {
 
 
 if(isset($_POST['save'])){
-    $sql = "UPDATE INTO blog (title, info,img)
-VALUES ('".$_POST["title"]."','".$_POST["info"]."','".$_POST["img"]."')";
+$sql= ("UPDATE blog SET info ='$_POST[nuevo]' 
+WHERE info ='$_POST[viejo]' and title='$_POST[viejo2]'");
+
 $result = $conn->query($sql);
-    header("Location: read.php");
+header("Location: read.php");
 }
 
 ?>
 
 <form method="post"> 
-<label id="title"> Title:</label><br/>
-<input type="text" name="title"><br/>
+Cuantos productos habia</br>
+<input type="text" name="viejo"><br/>
+Cuantos productos hay</br>
+<input type="text" name="nuevo"><br/>
 
-<label id="info">Info</label><br/>
-<input type="text" name="info"><br/>
-
-<label id="img">Img</label><br/>
-<input type="text" name="img"><br/>
+Producto a cambiar</br>
+<input type="text" name="viejo2"><br/>
+>
 
 <button type="submit" name="save">save</button>
 
-</form>
