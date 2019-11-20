@@ -1,3 +1,5 @@
+    <link rel="stylesheet" href="login.css">
+
 <?php
 $servername = "localhost";
 $username = "root";
@@ -20,6 +22,11 @@ $result = $conn->query($sql);
 
 ?>
 
+  <div class="login-page">
+    <div class="form">
+    
+
+
 <form method="post"> 
 <label id="title"> Title:</label><br/>
 <input type="text" name="title"><br/>
@@ -33,3 +40,7 @@ $result = $conn->query($sql);
 <button type="submit" name="save">save</button>
 
 </form>
+</form>
+    </div>
+  </div>
+</form> 

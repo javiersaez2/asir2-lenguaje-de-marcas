@@ -21,9 +21,9 @@ if ($result->num_rows > 0) {
 <!-- https://fontawesome.com/icons/edit?style=solid !-->
 
 <?php while($row = $result->fetch_assoc()) { ?>
-        
-        <div class="gallery"> <div class=dot><?php echo  $row["info"];?></div> <?php echo "<img width='20%' src=img/" . $row["img"].">"  ?>  
-        <div class="desc"><?php echo "id: " . $row["id"]. "<br> Producto: " . $row["title"]. "<br> Cuantos:" . $row["info"]; ?></div>
+<div class=color>        
+        <div class="gallery"><div class=dot><?php echo  $row["info"];?>€</div> <?php echo "<img width='20%' src=img/" . $row["img"].">"  ?>  
+        <div class="desc"><?php echo "Producto: " . $row["title"]; ?></div>
 
 
  <div class="desc2">          
@@ -43,7 +43,7 @@ if ($result->num_rows > 0) {
 </button></a>
         </div> 
          </div> 
-
+</div>
             <?php
     }
 } else {

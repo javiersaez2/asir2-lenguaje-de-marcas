@@ -40,5 +40,5 @@ if (($result->num_rows > 0) && ($user == $row["user"]) && (password_verify($pass
 
     header("Location: read.php");
 } else{
-    echo "KO";
+    header ("Location: login.html");
 }

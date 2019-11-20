@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<style>
+* {
+  box-sizing: boder-box;
+}
+
+body {
+  margin: 0;
+}
+
+#main {
+  position: relative;
+  z-index: 20;
+  background: #fff;
+  transition: -webkit-transform 0.6s ease;
+  transition: transform 0.6s ease;
+  transition: transform 0.6s ease, -webkit-transform 0.6s ease;
+}
+@media (min-width: 640px) {
+  #main {
+    padding: 1em;
+  }
+}
+
+.fake-section {
+  background: #eee;
+  height: 300px;
+}
+
+.tiles-a {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.tiles-a ul {
+  margin: 0;
+  padding: 0;
+}
+.tiles-a li {
+  list-style: none;
+}
+@media (min-width: 640px) {
+  .tiles-a li {
+    float: left;
+    width: 33.33%;
+  }
+}
+.tiles-a a {
+  margin: 1em;
+  display: block;
+  background: #222;
+  padding-top: 73%;
+  height: 0;
+}
+
+#aside {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  background: #eee;
+  overflow-y: scroll;
+  z-index: 10;
+}
+#aside img {
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+#aside .wrapper {
+  padding: 1em;
+}
+#aside .close {
+  width: 25px;
+  display: block;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+.show-detail {
+  overflow: hidden;
+}
+.show-detail #main {
+  -webkit-transform: translateX(-60%);
+          transform: translateX(-60%);
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+
+</style>
+<body>
+        <main role="main" id="main">
+
+                <section class="tiles-a">
+                    <ul>
+                        
+                        <li>
+                            <a href="#" style="background: url('https://unsplash.it/600/600?image=120'); background-size: cover;" aria-controls="aside" aria-expanded="false">
+                                <div class="details visually-hidden">
+                                    <img src="https://unsplash.it/1900/800?image=120" alt="Starry Night">
+                                    <div class="text-copy wrapper">
+                                        <h3>Name Here</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex porro tempore, rerum ullam quae rem tenetur officiis eveniet voluptate reprehenderit quibusdam maiores nihil nam, sequi molestias explicabo non quos. Deserunt.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="#" style="background: url('https://unsplash.it/600/600?image=640'); background-size: cover;" aria-controls="aside" aria-expanded="false">
+                                <div class="details visually-hidden">
+                                    <img src="https://unsplash.it/1900/800?image=640" alt="Ocean beach">
+                                    <div class="text-copy wrapper">
+                                        <h3>Cool Title Here</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex porro tempore, rerum ullam quae rem tenetur officiis eveniet voluptate reprehenderit quibusdam maiores nihil nam, sequi molestias explicabo non quos. Deserunt.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex porro tempore, rerum ullam quae rem tenetur officiis eveniet voluptate reprehenderit quibusdam maiores nihil nam, sequi molestias explicabo non quos. Deserunt.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="#" style="background: url('https://unsplash.it/600/600?image=238'); background-size: cover;" aria-controls="aside" aria-expanded="false">
+                                <div class="details visually-hidden">
+                                    <img src="https://unsplash.it/1900/800?image=238" alt="Manhattan">
+                                    <div class="text-copy wrapper">
+                                        <h3>Cool Title Here</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex porro tempore, rerum ullam quae rem tenetur officiis eveniet voluptate reprehenderit quibusdam maiores nihil nam, sequi molestias explicabo non quos. Deserunt.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex porro tempore, rerum ullam quae rem tenetur officiis eveniet voluptate reprehenderit quibusdam maiores nihil nam, sequi molestias explicabo non quos. Deserunt.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="#" style="background: url('https://unsplash.it/600/600?image=206'); background-size: cover;" aria-controls="aside" aria-expanded="false">
+                                <div class="details visually-hidden">
+                                    <img src="https://unsplash.it/1900/800?image=206" alt="Large bridge">
+                                    <div class="text-copy wrapper">
+                                        <h3>Cool Title Here</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex porro tempore, rerum ullam quae rem tenetur officiis eveniet voluptate reprehenderit quibusdam maiores nihil nam, sequi molestias explicabo non quos. Deserunt.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex porro tempore, rerum ullam quae rem tenetur officiis eveniet voluptate reprehenderit quibusdam maiores nihil nam, sequi molestias explicabo non quos. Deserunt.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="#" style="background: url('https://unsplash.it/600/600?image=134'); background-size: cover;" aria-controls="aside" aria-expanded="false">
+                                <div class="details visually-hidden">
+                                    <img src="https://unsplash.it/1900/800?image=134" alt="Large bridge">
+                                    <div class="text-copy wrapper">
+                                        <h3>Cool Title Here</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex porro tempore, rerum ullam quae rem tenetur officiis eveniet voluptate reprehenderit quibusdam maiores nihil nam, sequi molestias explicabo non quos. Deserunt.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex porro tempore, rerum ullam quae rem tenetur officiis eveniet voluptate reprehenderit quibusdam maiores nihil nam, sequi molestias explicabo non quos. Deserunt.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="#" style="background: url('https://unsplash.it/600/600?image=200'); background-size: cover;" aria-controls="aside" aria-expanded="false">
+                                <div class="details visually-hidden">
+                                    <img src="https://unsplash.it/1900/800?image=200" alt="Goat-like animal">
+                                    <div class="text-copy wrapper">
+                                        <h3>Cool Title Here</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex porro tempore, rerum ullam quae rem tenetur officiis eveniet voluptate reprehenderit quibusdam maiores nihil nam, sequi molestias explicabo non quos. Deserunt.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex porro tempore, rerum ullam quae rem tenetur officiis eveniet voluptate reprehenderit quibusdam maiores nihil nam, sequi molestias explicabo non quos. Deserunt.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="#" style="background: url('https://unsplash.it/600/600?image=120'); background-size: cover;" aria-controls="aside" aria-expanded="false">
+                                <div class="details visually-hidden">
+                                    <img src="https://unsplash.it/1900/800?image=120" alt="Starry Night">
+                                    <div class="text-copy wrapper">
+                                        <h3>Name Here</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex porro tempore, rerum ullam quae rem tenetur officiis eveniet voluptate reprehenderit quibusdam maiores nihil nam, sequi molestias explicabo non quos. Deserunt.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="#" style="background: url('https://unsplash.it/600/600?image=640'); background-size: cover;" aria-controls="aside" aria-expanded="false">
+                                <div class="details visually-hidden">
+                                    <img src="https://unsplash.it/1900/800?image=640" alt="Ocean beach">
+                                    <div class="text-copy wrapper">
+                                        <h3>Cool Title Here</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex porro tempore, rerum ullam quae rem tenetur officiis eveniet voluptate reprehenderit quibusdam maiores nihil nam, sequi molestias explicabo non quos. Deserunt.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex porro tempore, rerum ullam quae rem tenetur officiis eveniet voluptate reprehenderit quibusdam maiores nihil nam, sequi molestias explicabo non quos. Deserunt.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="#" style="background: url('https://unsplash.it/600/600?image=238'); background-size: cover;" aria-controls="aside" aria-expanded="false">
+                                <div class="details visually-hidden">
+                                    <img src="https://unsplash.it/1900/800?image=238" alt="Manhattan">
+                                    <div class="text-copy wrapper">
+                                        <h3>Cool Title Here</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex porro tempore, rerum ullam quae rem tenetur officiis eveniet voluptate reprehenderit quibusdam maiores nihil nam, sequi molestias explicabo non quos. Deserunt.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex porro tempore, rerum ullam quae rem tenetur officiis eveniet voluptate reprehenderit quibusdam maiores nihil nam, sequi molestias explicabo non quos. Deserunt.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="#" style="background: url('https://unsplash.it/600/600?image=206'); background-size: cover;" aria-controls="aside" aria-expanded="false">
+                                <div class="details visually-hidden">
+                                    <img src="https://unsplash.it/1900/800?image=206" alt="Large bridge">
+                                    <div class="text-copy wrapper">
+                                        <h3>Cool Title Here</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex porro tempore, rerum ullam quae rem tenetur officiis eveniet voluptate reprehenderit quibusdam maiores nihil nam, sequi molestias explicabo non quos. Deserunt.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex porro tempore, rerum ullam quae rem tenetur officiis eveniet voluptate reprehenderit quibusdam maiores nihil nam, sequi molestias explicabo non quos. Deserunt.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="#" style="background: url('https://unsplash.it/600/600?image=134'); background-size: cover;" aria-controls="aside" aria-expanded="false">
+                                <div class="details visually-hidden">
+                                    <img src="https://unsplash.it/1900/800?image=134" alt="Large bridge">
+                                    <div class="text-copy wrapper">
+                                        <h3>Cool Title Here</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex porro tempore, rerum ullam quae rem tenetur officiis eveniet voluptate reprehenderit quibusdam maiores nihil nam, sequi molestias explicabo non quos. Deserunt.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex porro tempore, rerum ullam quae rem tenetur officiis eveniet voluptate reprehenderit quibusdam maiores nihil nam, sequi molestias explicabo non quos. Deserunt.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="#" style="background: url('https://unsplash.it/600/600?image=200'); background-size: cover;" aria-controls="aside" aria-expanded="false">
+                                <div class="details visually-hidden">
+                                    <img src="https://unsplash.it/1900/800?image=200" alt="Goat-like animal">
+                                    <div class="text-copy wrapper">
+                                        <h3>Cool Title Here</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex porro tempore, rerum ullam quae rem tenetur officiis eveniet voluptate reprehenderit quibusdam maiores nihil nam, sequi molestias explicabo non quos. Deserunt.</p>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex porro tempore, rerum ullam quae rem tenetur officiis eveniet voluptate reprehenderit quibusdam maiores nihil nam, sequi molestias explicabo non quos. Deserunt.</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </section>
+            
+            </main>
+            
+            <aside role="complementary" id="aside" aria-hidden="true" aria-expanded="false">
+                <a href="#" class="close"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/close-white-thin.svg" alt="Close button"><span class="visually-hidden">Return to main content</span></a>
+                <div class="aside--details" tabindex="0" aria-live="polite" aria-atomic="true" aria-label="Image details">
+                    
+                </div>
+            </aside>
+              
+</body>
+</html>
+
+
+<script> 
+var $parent = $("#main"),
+	$aside = $("#aside"),
+	$asideTarget = $aside.find(".aside--details"),
+	$asideClose = $aside.find(".close"),
+	$tilesParent = $(".tiles-a"),
+	$tiles = $tilesParent.find("a"),
+	slideClass = "show-detail";
+
+// tile click
+$tiles.on("click", function(e) {
+	e.preventDefault();
+	e.stopPropagation();
+	if (!$("html").hasClass(slideClass)) {
+		$tiles.removeClass("active");
+		$(this).addClass("active");
+		$(this).attr("aria-expanded", "true");
+		loadTileData($(this));
+	} else {
+		killAside();
+		$(this).attr("aria-expanded", "false");
+	}
+});
+
+// kill aside
+$asideClose.on("click", function(e) {
+	e.preventDefault();
+	killAside();
+});
+
+// load data to aside
+function loadTileData(target) {
+	var $this = $(target),
+		itemHtml = $this.find(".details").html();
+	$asideTarget.html(itemHtml);
+	showAside();
+}
+
+// show/hide aside
+function showAside() {
+	if (!$("html").hasClass(slideClass)) {
+		$("html").toggleClass(slideClass);
+		$aside.attr("aria-hidden", "false");
+		focusCloseButton();
+	}
+}
+
+// handle esc key
+window.addEventListener(
+	"keyup",
+	function(e) {
+		// grab key pressed
+		var code = e.keyCode ? e.keyCode : e.which;
+
+		// escape
+		if (code === 27) {
+			killAside();
+		}
+	},
+	false
+);
+
+// kill aside
+function killAside() {
+	if ($("html").hasClass(slideClass)) {
+		$("html").removeClass(slideClass);
+		sendFocusBack();
+		$aside.attr("aria-hidden", "true");
+		$tiles.attr("aria-expanded", "false");
+	}
+}
+
+// send focus to close button
+function focusCloseButton() {
+	$asideClose.focus();
+}
+
+// send focus back to item that triggered event
+function sendFocusBack() {
+	$(".active").focus();
+}
+
+// handle body click to close off-canvas
+$parent.on("click", function(e) {
+	if ($("html").hasClass(slideClass)) {
+		killAside();
+	}
+});
+
+</script>
+

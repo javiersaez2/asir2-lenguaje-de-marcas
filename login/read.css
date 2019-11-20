@@ -1,54 +1,66 @@
-.color{
-background-color:DodgerBlue;
-font-family:"Times New Roman";
-    }
+@font-face {
+  font-family: "Starge_PERSONAL_USE_ONLY";
+  src: url('Starge_PERSONAL_USE_ONLY.ttf') format('woff2')
+  
+}
+ 
 
-    div.gallery {
-  margin: 5px;
-  border: 1px solid #ccc;
+div.gallery {
+  margin: 4px;
+  border: 0px solid #ccc;
   float: left;
   width: 16%;
-  height: 50%;
-  background-color:rgb(21, 142, 255);
+  height: 45%;
+  background-color:rgb(44, 44, 50);
+  border-radius: 13%;
+
+  
 }
 
 div.gallery:hover {
-  border: 1px solid #777;
+  border: 0px solid #777;
 }
 
 div.gallery img {
   width: 100%;
-  height: 50%;
+  height: 55%;
+  border-top-left-radius: 13%;
+  border-top-right-radius: 13%;
 }
 div.desc {
-  padding: 15px;
+  font-family: 'Starge_PERSONAL_USE_ONLY';
+  padding-top: 10px;
+  font-size: 150%;
   text-align: center;
 }
+
+.dot{
+  height: 4%;
+  width: 3%;
+  background-color: rgba(107, 107, 107, 0.445);
+  border-color: rgba(46, 46, 46, 0.644);
+  border-style: solid;
+  border-width: 3px;;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  font-size: 20px;
+  padding-top: 1%;
+position: absolute;
+}
+
+
+
 .desc2 {
   padding: 1%;
   float: left;
   text-align: center;
 }
 
- .boton{
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 4% 8%;
-    text-align: center;
-    text-decoration: none;
-    font-family:"Times New Roman";
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
- }       
- .boton2:hover {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-  }
+
 
   .btn {
-    background-color: rgb(21, 142, 255);
+    background-color: rgb(44,44,50);
     border: none;
     color: white;
     padding: 24px 32px;
@@ -56,7 +68,7 @@ div.desc {
     cursor: pointer;
   }
 .btn:hover {
-  background-color: rgb(78, 166, 255);
+  background-color: rgba(25, 25, 27, 0.568);
 }
 
   a:link {
@@ -78,22 +90,15 @@ div.desc {
     color: white;
     background-color: transparent;
     text-decoration: underline;
-  }
+    }
 
 
-  .dot {
-    top: 2%;
 
-    height: 25px;
-    width: 3%;
-    background-color: rgba(128, 198, 255, 0.616);
-    
-    border-radius: 50%;
-    display: inline-block;
-    text-align: center;
-    font-size: 20px;
-    padding-top: 1%;
-    height: 4%;
-    position: absolute;
 
+
+  body {
+    background: rgb(32, 32, 36); /* fallback for old browsers */
+    color: White;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;      
   }
