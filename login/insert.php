@@ -28,13 +28,13 @@ $result = $conn->query($sql);
 
 
 <form method="post"> 
-<label id="title"> Title:</label><br/>
+<label id="title"> Producto:</label><br/>
 <input type="text" name="title"><br/>
 
-<label id="info">Info</label><br/>
+<label id="info">Precio</label><br/>
 <input type="text" name="info"><br/>
 
-<label id="img">Img</label><br/>
+<label id="img">Imagen</label><br/>
 <input type="text" name="img"><br/>
 
 <button type="submit" name="save">save</button>

@@ -19,28 +19,13 @@ if ($result->num_rows > 0) {
 <link rel="stylesheet" href="read.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- https://fontawesome.com/icons/edit?style=solid !-->
-
+<a href="login.html"><div class="button">login</div></a>
 <?php while($row = $result->fetch_assoc()) { ?>
 <div class=color>        
 <div class="gallery"><div class=dot><?php echo  $row["info"];?>€</div> <?php echo "<img width='20%' src=img/" . $row["img"].">"  ?>  
-<div class="desc"><?php echo "Producto: " . $row["title"]; ?></div>
-
-
- <div class="desc2">          
-<button class="btn"><a href="update.php"><i class="fa fa-edit"></i></button>
-</a>
-</div>
-
-<div class="desc2">
-<form action="delete.php" method="POST">
-<button class="btn" value="Delete"> <a href="delete.php"><i class="fa fa-trash"></i></button>
-<input type="hidden" name="id" value="<?php echo $row["id"]?>">
-</a></form>
-</div>
-
-<div class="desc2">
-<button class="btn"> <a href="insert.php"><i class="fa fa-plus-square"></i></button>
-</button></a>
+</br></br><div class="desc"><?php echo "Producto: " . $row["title"]; ?></div>
+</br>
+</br>
         </div> 
          </div> 
 </div>

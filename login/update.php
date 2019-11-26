@@ -28,7 +28,7 @@ header("Location: read.php");
 Producto a cambiar</br>
 <input type="text" name="viejo2"><br/>
 
-Cuantos productos hay</br>
+Precio a cambiar</br>
 <input type="text" name="nuevo"><br/>
 
 
