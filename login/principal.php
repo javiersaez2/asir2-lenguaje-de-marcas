@@ -19,7 +19,7 @@ if ($result->num_rows > 0) {
 <link rel="stylesheet" href="read.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <!-- https://fontawesome.com/icons/edit?style=solid !-->
-<a href="login.html"><div class="button">login</div></a>
+<a href="login.html"><div class="button">LOGIN</div></a>
 <?php while($row = $result->fetch_assoc()) { ?>
 <div class=color>        
 <div class="gallery"><div class=dot><?php echo  $row["info"];?>€</div> <?php echo "<img width='20%' src=img/" . $row["img"].">"  ?>  
