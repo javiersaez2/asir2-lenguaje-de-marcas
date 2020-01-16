@@ -1,5 +1,9 @@
 {
     "require": {
-        "intervention/image": "^2.5"
+        "intervention/image": "^2.5",
+        "dmitry-ivanov/dark-sky-api": "^1.1",
+        "symfony/translation": "^5.0",
+        "diversen/simple-php-translation": "^2.0",
+        "stichoza/google-translate-php": "^4.0"
     }
 }

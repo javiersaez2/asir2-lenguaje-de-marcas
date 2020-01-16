@@ -27,6 +27,7 @@ $image->encode('png');
 $type = 'png';
 $base64 = 'data:image/' . $type . ';base64,' . base64_encode($image);
 echo "<img src=$base64>";
+
 //*********** */
 $image = Image::make('eibar.jpg');
 // rotate image 45 degrees clockwise
@@ -35,3 +36,41 @@ $image->encode('png');
 $type = 'png';
 $base64 = 'data:image/' . $type . ';base64,' . base64_encode($image);
 echo "<img src=$base64>";
+
+//*********** */
+$image = Image::make('eibar.jpg');
+$image->pixelate(12);
+$image->encode('png');
+$type = 'png';
+$base64 = 'data:image/' . $type . ';base64,' . base64_encode($image);
+echo "<img src=$base64>";
+
+
+$image = Image::canvas(800, 600, '#ddd');
+
+$base64 = 'data:image/' . $type . ';base64,' . base64_encode($image);
+echo "<img src=$base64>";
+// define polygon points
+$points = array(
+    40,  50,  // Point 1 (x, y)
+    20,  240, // Point 2 (x, y)
+    60,  60,  // Point 3 (x, y)
+    240, 20,  // Point 4 (x, y)
+    50,  40,  // Point 5 (x, y)
+    10,  10   // Point 6 (x, y)
+);
+
+// draw a filled blue polygon with red border
+// create empty canvas with background color
+$image = Image::canvas(100, 100, '#ddd');
+
+// draw a blue line
+$image->line(10, 10, 100, 10, function ($draw) {
+    $draw->color('#0000ff');
+});
+
+// draw a red line with 5 pixel width
+$image->line(10, 10, 195, 195, function ($draw) {
+    $draw->color('#f00');
+    $draw->width(5);
+});
