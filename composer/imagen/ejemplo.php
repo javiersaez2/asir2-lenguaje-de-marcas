@@ -65,8 +65,24 @@ $tr = new GoogleTranslate(); // Translates into English
   </p>
 </form>
 Traducido: <?php echo $tr->translate( $_GET['nombre']);?>
-<?php echo  $row["letra"];?>
 
+
+
+
+
+
+<?php //Ejemplo funciones básicas aprenderaprogramar.com
+$uno = 'Diego';
+$dos = 'eeee';
+$texto = "Donde dije digo digo Diego.";
+
+echo str_replace($uno, $dos, $texto);
+
+echo "<br />";
+
+echo $texto;
+
+?>
 <br>
 </body>
 </html>
