@@ -74,3 +74,7 @@ $image->line(10, 10, 195, 195, function ($draw) {
     $draw->color('#f00');
     $draw->width(5);
 });
+?>
+<form action="ejemplo.php" method="get">
+  <p>Nombre: <input type="text" name="nombre" size="40"></p>
+  <input type="submit" value="Enviar">
