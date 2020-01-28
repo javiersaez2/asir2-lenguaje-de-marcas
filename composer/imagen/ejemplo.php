@@ -49,7 +49,7 @@ if ($result->num_rows > 0) {
 }
 $conn->close();
 
-$tr = new GoogleTranslate(en); // Translates into English 
+$tr = new GoogleTranslate(es); // Translates into English 
 ?>
 
 
@@ -145,7 +145,7 @@ tra<textarea placeholder="Message" onkeyup="adjust_textarea(this)" name="nombre2
 
   </p>
 </form>
-Traducido: <?php echo $tr->translate( $_GET['nombre2']);?>
+Traducido: <?php echo $tr->translate( $_GET['nombre']);?>
 
 
 
