@@ -8,27 +8,28 @@ $tr = new GoogleTranslate(es); // Translates into English
 
 
 <!DOCTYPE html>
-<html>
+<html> 
 <style>
 
+/* Logo Asistente*/
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+
 }
 #ad{
   font-size:15px;
   position:relative;
   bottom:-500px;
   font-color:#f9f9f9;
+  
 }
 
     body{
-    background-color: black;    
+    background-color:  #1d1e26;    
+
     }
     .wrapper {
         position: absolute;
-        top: 50%;
+        top: 35%;
         left: 50%;
         -webkit-transform: translateY(-50%) translateX(-50%);
         transform: translateY(-50%) translateX(-50%);
@@ -130,16 +131,17 @@ $tr = new GoogleTranslate(es); // Translates into English
   }
 }
 
+/* Fin Logo Asistente*/
 
 
 
 
 
-
-
+/*Cuadro de texto*/ 
 html {
   box-sizing: border-box;
   font-size: 10px;
+  
 }
 
 *,
@@ -187,10 +189,7 @@ button {
 }
 
 body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-image: radial-gradient(circle at 0% 0%, #373b52, #252736 51%, #1d1e26);
+
 }
 
 h1.demo {
@@ -215,15 +214,7 @@ a.demo {
 }
 
 .container {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
-  height: 100vh;
-  max-width: 1600px;
-  padding: 0 15px;
-  margin: 0 auto;
+
 }
 
 @-webkit-keyframes gradient {
@@ -244,6 +235,8 @@ a.demo {
   }
 }
 .webflow-style-input {
+  left:10%;
+  top:10%;
   position: relative;
   display: -webkit-box;
   display: flex;
@@ -257,6 +250,7 @@ a.demo {
   padding: 1.4rem 2rem 1.6rem;
   background: rgba(57, 63, 84, 0.8);
 }
+
 .webflow-style-input:after {
   content: "";
   position: absolute;
@@ -298,7 +292,25 @@ a.demo {
 .webflow-style-input button:hover {
   color: #bfd2ff;
 }
+/*Fin cuadro de texto*/
 
+
+.cuadro{
+  position: absolute;
+  top:55%;
+  left:25%;
+  height:auto;
+  width: 20%;
+  border: 0px solid green;
+}
+.cuadro2{
+  position: absolute;
+  top:55%;
+  left:50%;
+  height:auto;
+  width: 20%;
+  border: 0px solid red;
+}
 
 </style>
 
@@ -306,7 +318,7 @@ a.demo {
 
 
     
-    
+<!-- Logo Asistente-->
 <div class="wrapper" onload="myFunction()">
         <div class="loading-wrapper">
           <div class="loader">
@@ -314,31 +326,32 @@ a.demo {
           </div>
         </div>
       </div>
+<!--Fin Logo Asistente-->
 
+<!-- Texto para traducir-->    
 
-
+<div class="cuadro">
 <form action="texbox.php" method="get">
-<div class="container">
-  
-  <div class="demo-flex-spacer"></div>
+
+  <div class="demo-flex-spacer">
 
   <div class="webflow-style-input">
-    <input class="" type="text" name="nombre" placeholder="What's your email?"value="<?php echo $_GET['nombre'] ?>"></input>
+    <input class="" type="text" name="nombre" placeholder="Texto para traducir"value="<?php echo $_GET['nombre'] ?>"></input>
     <button type="submit"><i class="icon ion-android-arrow-forward">→</i></button>
-  </div>
-
+  </div></div></div>
+<!-- Fin Texto para traducir-->
   
- 
-  <div class="container">
+  
+<!-- Texto traducido-->
+<div class="cuadro2">
   <div class="webflow-style-input">
-  <input class=""placeholder="Traducido: <?php echo $tr->translate( $_GET['nombre']);?>"></div>
+  <input type="text" class=""placeholder="Traducido:" value= "<?php echo $tr->translate( $_GET['nombre']);?>"</div>
   </imput>
   </div>
-  <div class="demo-flex-spacer"></div>
-  <h1 class="demo">Webflow-style input</h1>
-  <a class="demo" href="https://webflow.com/cms" title="Webflow CMS">https://webflow.com/cms</a>
-
-</form>
+  <div class="demo-flex-spacer"></div></div>
+<!-- Fin Texto traducido-->
 </div>
+</form>
+
 </body>
 </html>
