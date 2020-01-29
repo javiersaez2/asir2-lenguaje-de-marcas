@@ -3,6 +3,11 @@ require 'vendor/autoload.php';
 
 use Stichoza\GoogleTranslate\GoogleTranslate;
 $tr = new GoogleTranslate(es); // Translates into English 
+
+$textoes = "Escribe texto para traducir";
+$textoen = $tr->setSource('es')->setTarget('en')->translate('Escribe texto para traducir, prueba de texto');
+$textoch = $tr->setSource('es')->setTarget('zh')->translate('Escribe texto para traducir, prueba de texto');
+$textofr = $tr->setSource('es')->setTarget('fr')->translate('Escribe texto para traducir, prueba de texto');
 ?>
 
 
@@ -312,6 +317,12 @@ a.demo {
   border: 0px solid red;
 }
 
+
+.content {
+  color: #fff;
+  font-size: 80px;
+  font-weight: bold;
+}
 </style>
 
 <body>
@@ -343,15 +354,45 @@ a.demo {
   
   
 <!-- Texto traducido-->
+
 <div class="cuadro2">
+<form action="texbox.php" method="get">
+
+  <div class="demo-flex-spacer">
+
   <div class="webflow-style-input">
-  <input type="text" class=""placeholder="Traducido:" value= "<?php echo $tr->translate( $_GET['nombre']);?>"</div>
-  </imput>
-  </div>
-  <div class="demo-flex-spacer"></div></div>
+    <input class="" type="text" name="nombre" placeholder="Traducido"value="<?php echo $_GET['nombre'] ?>"></input>
+    <button type="submit"><i class="icon ion-android-arrow-forward"></i></button>
+  </div></div></div>
+
 <!-- Fin Texto traducido-->
-</div>
+
 </form>
 
+
+<div class="content">
+   <span class="typing"></span>
+   </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>  
+    <script src="https://www.mattboldt.com/demos/typed-js/js/typed.custom.js" type="text/javascript"></script>  
+ <script>
+
+$(function(){
+        $(".typing").typed({
+            strings: ["<?php echo $textoes?>", "<?php echo $textofr?>", "<?php echo $textoen?>", "<?php echo $textoch?>"],
+            typeSpeed: 50,
+            backSpeed: 50,
+            startDelay: 0,
+            backDelay: 500,
+            loop: true,
+            loopCount: false,
+            attr: null
+        });
+    });
+
+
+</script>
 </body>
+
 </html>
