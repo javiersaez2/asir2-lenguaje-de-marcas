@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<style>
+    .fondode{
+     background-color: red;         
+    }
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700');
+body {
+
+      margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu' !important;
+
+}
+
+
+.box-styling {
+    background-color: greeN;
+    border-radius: 4px;
+    box-shadow:  0 16px 16px 0 rgba(0, 0, 0, 0.3);
+}
+
+
+/*---------------- CLEARFIX hack --------------------*/
+
+.clearfix:before, .clearfix:after {
+    background-color: aqua;
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    background-color: aqua;
+    clear: both;
+}
+
+
+/*---------------- CLEARFIX hack end ----------------*/
+
+
+/*====== Header =======*/
+
+.wrapper .navbar-header .navbar-brand {
+    background-color: aqua;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+}
+
+.wrapper .navbar-header .navbar-brand .logo {
+    background-color: aqua;
+    height: 36px;
+    width: 43px;
+    margin: 7px 14px;
+}
+
+
+/*----- Main menu -----*/
+
+header div .menu-left li a.active {
+    background-color: #314761;
+    box-shadow: inset 0 -3px 0 0 #3fc1c9;
+}
+
+.menu-left li a:hover:not(.active) {
+    background-color: aqua;
+    background-color: inherit;
+    position: relative;
+}
+    
+
+header div .menu-left li a:hover .messages {
+    background-color: aqua;
+    transform: rotate(360deg);
+    transition: transform 0.3s linear;
+}
+
+header .menu-right li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 0;
+    margin-top: 14px;
+    margin-left: 7px;
+    margin-right: 7px;
+    text-decoration: none;
+}
+
+header div .menu-right li a:hover {
+    background-color: inherit;
+}
+
+header div .menu-left li a:visited, header div .menu-left li a:focus, header div .menu-right li a:visited, header div .menu-right li a:focus {
+    outline: 0;
+    background-color: #364f6b;
+}
+
+.menu-right .menu_profile_pic {
+    padding: 0;
+    margin: 0;
+    cursor: default;
+}
+
+.menu-right .menu_profile_pic img:hover {
+    margin: 5px 5px 5px 0;
+    height: 40px;
+    width: 40px;
+    transition: all 0.2s;
+}
+
+.settings-icon, .logout-icon {
+    position: relative;
+}
+
+.menu-right li a.settings:hover .settings-icon {
+    transform: rotate(45deg);
+    transition: transform 0.2s ease-in-out;
+}
+
+.menu-right li a.logout:hover .logout-icon {
+    animation: logout-shake 1s;
+}
+
+@keyframes logout-shake {
+    0% {
+        left: 0px;
+    }
+    25% {
+        left: 3px;
+    }
+    50% {
+        left: 0px;
+    }
+    75% {
+        left: 3px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+
+
+/*====== Main content ======*/
+
+
+/*------ Articles -------*/
+
+
+/*------ Side menu -------*/
+
+.today {
+    max-width: 265px;
+    width: 100%;
+    min-height: 100px;
+    margin: auto;
+}
+
+.todays-head {
+    height: 60px;
+    font-size: 32px;
+    line-height: 60px;
+    text-align: center;
+    background-color: #314761;
+    border-radius: 4px;
+    color: #fff;
+    position: relative;
+}
+
+.left-arrow {
+    text-align: center;
+    height: 29px;
+    width: 29px;
+    padding: 2px;
+    font-size: 18px;
+    line-height: 20px;
+    border: 2px solid #3fc1c9;
+    border-radius: 50%;
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    cursor: pointer;
+}
+
+.right-arrow {
+    text-align: center;
+    height: 29px;
+    width: 29px;
+    padding: 2px;
+    font-size: 18px;
+    line-height: 18px;
+    border: 2px solid #3fc1c9;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    cursor: pointer;
+}
+
+.right-arrow:active, .left-arrow:active {
+    height: 25px;
+    width: 25px;
+    margin-top: 2px;
+    padding: 1px;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.left-arrow:active {
+    margin-left: 2px;
+}
+
+.right-arrow:active {
+    margin-right: 2px;
+}
+
+.todays-body {
+    height: 120px;
+    padding: 20px 0 10px;
+    font-size: 94px;
+    line-height: 94px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+}
+
+.todays-footer {
+    margin: 0;
+    min-height: 60px;
+    text-align: center;
+}
+
+
+
+</style>
+
+<body>
+    <div class="fondode">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+   
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<div class="wrapper">
+        <div class="container mt_20">
+            <div class="row">
+                <div class="col-xs-12">
+                    <header class="box-styling">
+                        <div class="navbar-header">
+
+                                <img src="http://www.crearpublicitarios.com/img/administradores/imagenes-png.png" class="logo" alt="Logo" />
+                            </a>
+                        </div>
+                        <div class="collapse navbar-collapse">
+
+                            </ul>
+                            <ul class="menu-right nav navbar-nav navbar-right">
+                                <li>
+                                    
+                                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="settings" href="#">
+                                        <i class="settings-icon fa fa-cog" aria-hidden="true"></i> Settings
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="logout" href="#">
+                                        <i class="logout-icon fa fa-sign-out" aria-hidden="true"></i> Logout
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </header>
+                </div>
+            </div>
+        </div>
+
+</div>
